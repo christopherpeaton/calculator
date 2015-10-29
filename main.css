@@ -10,6 +10,10 @@
     width: 250px;
     height: 80px;
 }
+button {
+    width: 50px;
+    height: 50px;
+}
 .top_row_operators {
     border: 1px solid red;
     width: 190px;
@@ -17,6 +21,7 @@
 .top_row_operators > div {
     display: inline-block;
 }
+
 .side_column_operators {
     border: 1px solid blue;
     width: 100px;
@@ -25,11 +30,16 @@
     right: 0px;
     top: 81px;
 }
-.number_pad > div{
+.number_pad > div {
+    /*display: inline-block;*/
     border: 1px solid black;
     width: 200px;
 }
+.number_pad, button {
+    display: inline-block;
+}
 .firstrow {
+    display: inline-block;
     border: 1px solid purple;
 }
 .secondrow {

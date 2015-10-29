@@ -3,6 +3,7 @@
  */
 
 
+
 var my_calculator
 () = new_calculator(parameters);
 $(document).ready(function () {
@@ -28,3 +29,4 @@ function parameters(type, value, item) {
         };
     };
 };
+

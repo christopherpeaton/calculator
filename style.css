@@ -1,14 +1,18 @@
 .calculator_container {
-    border: 1px solid green;
+    border: 3px solid black;
     width: 228px;
-    height: 324px;
+    height: 320px;
     position: relative;
+    background-color: #6a6969;
 }
+
 #display_area {
     margin: auto;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 227px;
     height: 56px;
+    color: white;
+    background-color: black;
 }
 button {
     width: 50px;
@@ -17,45 +21,51 @@ button {
 .top_row_operators  button {
     width: 77px;
     hight: 50px;
+    background-color: #008AC9;
 }
 .top_row_operators {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     margin-left: 1px;
 }
 .top_row_operators > div {
     display: inline-block;
 }
 .side_column_operators {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     width: 66px;
     height: 210px;
     position: absolute;
     right: 0px;
-    top: 112px;
+    top: 107px;
 }
 .side_column_operators div {
     margin: auto;
 }
 .side_column_operators button {
     width: 67px;
-    height: 53px;
+    height: 50px;
+    background-color: #2B115A;
+    color: white;
 }
 .number_pad {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 200px;
 }
 .number_pad div {
     display: inline-block;
 }
+.number_pad button {
+    background-color: #F11A22;
+}
 .firstrow {
-    border: 1px solid purple;
+    /*border: 1px solid purple;*/
 }
 .secondrow {
-    border: 1px solid darkmagenta;
+    /*border: 1px solid darkmagenta;*/
 }
 .thirdrow {
-    border: 1px solid darkolivegreen;
+    /*border: 1px solid darkolivegreen;*/
 }
 .fourthrow {
-    border: 1px solid darkturquoise;
+    /*border: 1px solid darkturquoise;*/
 }

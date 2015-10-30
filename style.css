@@ -1,10 +1,10 @@
-#calculator_container {
+.calculator_container {
     border: 1px solid green;
     width: 262px;
     height: 350px;
     position: relative;
 }
-.display {
+#display_area {
     margin: auto;
     border: 1px solid black;
     width: 250px;

@@ -1,36 +1,44 @@
 .calculator_container {
     border: 1px solid green;
-    width: 262px;
-    height: 350px;
+    width: 228px;
+    height: 324px;
     position: relative;
 }
 #display_area {
     margin: auto;
     border: 1px solid black;
-    width: 250px;
-    height: 80px;
+    width: 227px;
+    height: 56px;
 }
 button {
     width: 50px;
     height: 50px;
 }
+.top_row_operators  button {
+    width: 77px;
+    hight: 50px;
+}
 .top_row_operators {
     border: 1px solid red;
-    width: 190px;
+    margin-left: 1px;
 }
 .top_row_operators > div {
     display: inline-block;
 }
 .side_column_operators {
     border: 1px solid blue;
-    width: 75px;
-    height: 269px;
+    width: 66px;
+    height: 210px;
     position: absolute;
     right: 0px;
-    top: 81px;
+    top: 112px;
 }
 .side_column_operators div {
     margin: auto;
+}
+.side_column_operators button {
+    width: 67px;
+    height: 53px;
 }
 .number_pad {
     border: 1px solid black;

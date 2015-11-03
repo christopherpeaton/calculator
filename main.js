@@ -25,9 +25,9 @@ $(document).ready(function () {
         math(num1, op, num2);
         console.log("total");
     });
-    $(".allClear").on('click', 'button', function() {
+    $("#allClear").on('click', function() {
         console.log("allClear clicked");
-        document.getElementById(".calculator_container").reset();
+        allClear();
     })
 
 });
@@ -100,7 +100,14 @@ function math() {
 function updateDisplay(display_val) {
     $("#display_area").text(display_val);
 }
-
+function allClear() {
+    num_array=[''];
+    num1=null;
+    num2=null;
+    op=null;
+    i=0;
+    updateDisplay(num_array)
+}
 
 //clear/ac button
 //multiple decimals

@@ -22,16 +22,16 @@ $(document).ready(function () {
         input_operator(button);
     });
     $("#equals").on("click", function () {
-        opSwitch();
         math(num1, op, num2);
         console.log("total");
     });
+    $(".allClear").on('click', 'button', function() {
+        console.log("allClear clicked");
+        document.getElementById(".calculator_container").reset();
+    })
+
 });
-num1 = null;
-num2 = null;
-op = null;
-var i = 0;
-var num_array = [''];
+
 
 function input_digit(numString) {
     num_array[i] += numString;
@@ -58,42 +58,54 @@ function opSwitch(num1, op, num2) {
             total = Number(num1) * Number(num2);
             break;
         case '/':
-            if (num2 === 0) {
-                alert("need more input");
-                return;
+            if (num2 === '0') {
+                //alert("need more input");
+                return "error";
             } else {
                 total = Number(num1) / Number(num2);
             }
             break;
     }
+    return total;
 }
 
-num1 = null;
-num2 = null;
-op = null;
-var i = 0;
-var num_array = [''];
+function math() {
+    var num1 = null, num2 = null, op = null, result = null;
 
-function math(num1, op, num2) {
-    for (i = 0; i < num_array.length; i++) {
+    for (i = 0; num_array.length > 1 && i < num_array.length; i++) {
         if (!isNaN(num_array[i])) {
             //is a number
             if (num1 === null) {
                 num1 = num_array[i];
                 console.log("num1 in array");
             } else {
+                //have enough at this point to do math (num1 and operator)
                 num2 = num_array[i];
                 console.log("num2 in array");
-                opSwitch()
+                result = opSwitch(num1, op, num2);
+                num_array[0] = result;
+                num_array.splice(i - 1, 2);
+                i = -1;
+                num1 = null;
+                num2 = null;
+                op = null;
             }
         } else {
             // is an op
             op = num_array[i];
         }
     }
+    updateDisplay(result);
+}
+function updateDisplay(display_val) {
+    $("#display_area").text(display_val);
 }
 
 
-//.apply()
-//    .call()
-
+//clear/ac button
+//multiple decimals
+//operation repeat
+//successive multi operation
+//partial operand
+//missing operation
+//missing operand

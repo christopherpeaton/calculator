@@ -108,6 +108,8 @@ function allClear() {
     i=0;
     updateDisplay(num_array)
 }
+function clear() {}
+    num_array.pop()
 
 //clear/ac button
 //multiple decimals

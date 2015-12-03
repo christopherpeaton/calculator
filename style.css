@@ -14,22 +14,27 @@
     color: white;
     background-color: black;
 }
+
 button {
     width: 50px;
     height: 50px;
 }
-.top_row_operators  button {
+
+.top_row_operators button {
     width: 77px;
     height: 50px;
     background-color: #008AC9;
 }
+
 .top_row_operators {
     /*border: 1px solid red;*/
     margin-left: 1px;
 }
+
 .top_row_operators > div {
     display: inline-block;
 }
+
 .side_column_operators {
     /*border: 1px solid blue;*/
     width: 66px;
@@ -38,34 +43,43 @@ button {
     right: 0px;
     top: 107px;
 }
+
 .side_column_operators div {
     margin: auto;
 }
+
 .side_column_operators button {
     width: 67px;
     height: 50px;
     background-color: #2B115A;
     color: white;
 }
+
 .number_pad {
     /*border: 1px solid black;*/
     width: 200px;
 }
+
 .number_pad div {
     display: inline-block;
 }
+
 .number_pad button {
     background-color: #F11A22;
 }
+
 .firstrow {
     /*border: 1px solid purple;*/
 }
+
 .secondrow {
     /*border: 1px solid darkmagenta;*/
 }
+
 .thirdrow {
     /*border: 1px solid darkolivegreen;*/
 }
+
 .fourthrow {
     /*border: 1px solid darkturquoise;*/
 }

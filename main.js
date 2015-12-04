@@ -21,11 +21,10 @@ $(document).ready(function () {
         //console.log("op:", $(this).text());
         var button = $(this).text();
         input_operator(button);
-
     });
     $("#equals").on("click", function () {
         math(num1, op, num2);
-        console.log("total");
+            console.log("total");
     });
     $("#clear").on("click", function () {
         console.log("clear clicked");
@@ -34,7 +33,7 @@ $(document).ready(function () {
     $("#allClear").on('click', function () {
         console.log("allClear clicked");
         allClear();
-    })
+    });
 });
 
 function input_digit(numString) {
@@ -46,7 +45,19 @@ function input_digit(numString) {
             }
             break;
         default:
-        num_array[i] = numString;
+            // looks at array, makes it a number then checks if it is a number
+            if (isNaN(parseInt(num_array[i]))) {
+                //if not a number, replaces it with the number
+                num_array[i] = numString;
+                console.log("num_array", num_array);
+            } else {
+                //if number, add to array
+                num_array[i] += numString;
+                console.log("stef says it must");
+            }
+            console.log(" after default");
+
+        //num_array[i] = numString;
     }
     console.log(num_array[i]);
     $("#display_area").text(num_array[i]);
@@ -58,23 +69,6 @@ function input_operator(op) {
     i++;
     num_array[i] = '';
     can_add_decimal = true;
-}
-
-//function checking_for_decimals() {
-//    if
-//    if (can_add_decimal != true)
-//    return false;
-//}
-function multi_decimal() {
-    for (var i = 0; i < num_array.length; i++) {
-        for (var j = 0; j< num_array.length; j++) {
-            if (num_array[i] == num_array[j]) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-    }
 }
 
 //do operator stuff here
@@ -97,6 +91,7 @@ function opSwitch(num1, op, num2) {
                 total = Number(num1) / Number(num2);
             }
             break;
+
     }
     return total;
 }
@@ -116,11 +111,9 @@ function math() {
                 console.log("num2 in array");
                 result = opSwitch(num1, op, num2);
                 num_array[0] = result;
-                num_array.splice(i - 1, 2);
+
+                    num_array.splice(i - 1, 2);
                 i = -1;
-                num1 = null;
-                num2 = null;
-                op = null;
             }
         } else {
             // is an op
@@ -148,8 +141,10 @@ function clear() {
     updateDisplay(num_array);
 }
 
-//multiple decimals
 //operation repeat
+//check for num1, op, and num2
+// check for multiple clicks of equals button
+//everytime equals button clicked
 //successive multi operation
 //partial operand
 //missing operation
